@@ -1,0 +1,31 @@
+[project]
+name = "de-engineering"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "ttngua", email = "ttngua@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "duckdb>=2.0.0",
+    "pandas>=3.0.6",
+    "polars>=2.0.0",
+    "psycopg2-binary>=2.9.13",
+    "pyarrow>=26.0.0",
+    "requests>=2.34.2",
+    "sqlalchemy>=2.1.6",
+]
+
+[project.scripts]
+de-engineering = "de_engineering:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
